@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+
+    <RelativeLayout
+        android:padding="35dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/value_bg"
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:id="@+id/txtGhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:text="Value in Ghana Cedis"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:id="@+id/valGhs"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/txtGhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="GHC 50.00"
+            android:textSize="30dp"/>
+
+
+        <View
+            android:id="@+id/divider"
+            android:background="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:id="@+id/txtForeign"
+            android:layout_above="@+id/valForeign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Value in USD"
+            android:textSize="20dp"/>
+
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:id="@+id/valForeign"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="$ 8.95"
+            android:textSize="30dp"/>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
+

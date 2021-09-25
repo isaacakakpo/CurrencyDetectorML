@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FFFF"
+    android:layout_height="match_parent"
+    tools:context="com.example.ceditect.ui.currencyvalue.GetExchangeRates">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Ceditect"
+                android:layout_alignParentBottom="true"
+                android:textSize="20sp"
+                android:textColor="@color/colorTextPrimary"/>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/transition_group"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6.5">
+
+
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/circularProgressBar"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_centerInParent="true"
+                app:cpb_indeterminate_mode="true"
+                app:cpb_background_progressbar_color="#b6bbd8"
+                app:cpb_background_progressbar_width="5dp"
+                app:cpb_progress_direction="to_right"
+                app:cpb_progressbar_color="#3f51b5"
+                app:cpb_progressbar_width="10dp"
+                app:cpb_round_border="false" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/noData"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/no_data"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"/>
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/imgAlldone"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/alldone"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"/>
+
+
+            <RelativeLayout
+                android:id="@+id/pleaseWait"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/wait"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Please Wait"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/finalizing"
+                    android:layout_below="@+id/wait"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/colorTextSecondary"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Finalizing........"
+                    android:textSize="15sp"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtAllDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="All Done"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_above="@+id/Continue"
+                android:visibility="gone"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/getting"
+                android:layout_below="@+id/noData"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="No Internet Connection Please Try Again later"
+                android:textSize="15sp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:id="@+id/Continue"
+                android:visibility="gone"
+                android:textColor="@android:color/white"/>
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

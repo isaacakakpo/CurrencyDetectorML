@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ceditect.ui.MainPageActivity">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/image_bg"
+            android:scaleType="fitXY"/>
+
+        <include layout="@layout/video_background"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/graphic_overlay"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5">
+
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/cediSym"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ico_cedi"/>
+
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_height="30dp"
+                android:src="@drawable/info_ic"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Welcome to Ceditect"
+                android:layout_below="@+id/cediSym"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"/>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:padding="10dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.02"/>
+
+                <RelativeLayout
+                    android:id="@+id/detectCedi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    android:background="@drawable/detect_bg">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Detect Cedi Note"
+                        android:textColor="@android:color/white"
+                        android:layout_centerInParent="true"
+                        android:textSize="15sp"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    >
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/exchangeRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@drawable/detect_bg"
+                        android:textSize="15sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Currency Value"
+                            android:textColor="@android:color/white"
+                            android:layout_centerInParent="true"
+                            android:textSize="15sp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/info"
+                        android:layout_below="@+id/exchangeRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/detect_bg"
+                        android:textSize="15sp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Load Live Currency Data"
+                            android:textColor="@android:color/white"
+                            android:layout_centerInParent="true"
+                            android:textSize="15sp"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.01"/>
+
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    
+
+</RelativeLayout>

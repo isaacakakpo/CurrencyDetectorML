@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ceditect">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ico_cedi"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.BaseCurrencyActivity"></activity>
+        <activity android:name=".ui.currencyvalue.UpdateExchangeRates" />
+        <activity android:name=".ui.TexttoSpeech" />
+        <activity android:name=".ui.currencyvalue.GetExchangeRates" />
+        <activity android:name=".ui.currencyvalue.ExchangeRatesActivity" />
+        <activity android:name=".ui.printDummy" />
+        <activity android:name=".ui.CurrencyDetectedActivity" />
+        <activity android:name=".ui.OnCediDetectedActivity" />
+        <activity android:name=".ui.MainPageActivity" />
+        <activity android:name=".ui.CediTectActivity" />
+        <activity android:name=".ui.DownloadModelActivity" />
+        <activity android:name=".ui.MainActivity" />
+        <activity
+            android:name=".ui.IntroActivity"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

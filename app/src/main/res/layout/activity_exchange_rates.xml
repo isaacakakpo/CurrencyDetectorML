@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ceditect.ui.printDummy">
+
+
+    <RelativeLayout
+        android:background="#F1ECEC"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toStartOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <RelativeLayout
+                android:layout_weight="0.7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/toolbar">
+
+
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_width="18dp"
+                    android:onClick="goBack"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ico_back"/>
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="12 March, 2020"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorTextPrimary"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4">
+
+
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:id="@+id/ghc"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/gh_bg"/>
+
+                  <RelativeLayout
+                      android:elevation="20dp"
+                      android:layout_width="wrap_content"
+                      android:layout_height="150dp"
+                      android:paddingTop="20dp"
+                      android:layout_centerInParent="true"
+                      android:id="@+id/group">
+
+                      <ImageView
+                          android:id="@+id/cediSym"
+                          android:layout_width="20dp"
+                          android:layout_alignParentTop="true"
+                          android:layout_marginBottom="20dp"
+                          android:layout_height="20dp"
+                          android:layout_centerHorizontal="true"
+                          android:src="@drawable/cedi_sym"/>
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@+id/cediSym"
+                          android:id="@+id/one"
+                          android:layout_marginBottom="20dp"
+                          android:layout_centerHorizontal="true"
+                          android:textColor="@color/colorTextPrimary"
+                          android:textSize="30sp"
+                          android:text="1.00"/>
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@+id/one"
+                          android:layout_alignParentBottom="true"
+                          android:layout_centerHorizontal="true"
+                          android:textColor="@color/colorTextPrimary"
+                          android:textSize="20sp"
+                          android:text="GHS"/>
+
+
+                  </RelativeLayout>
+
+
+
+
+
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:paddingTop="15dp"
+                android:paddingBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_weight="5.3">
+
+                <RelativeLayout
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/usd_bg"
+                        android:background="@drawable/cad_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:padding="10dp"
+                        android:paddingEnd="10dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/img_usd"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/usd"/>
+
+                        <TextView
+                            android:id="@+id/text_usd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/img_usd"
+                            android:textColor="@color/colorTextPrimary"
+                            android:text="United States Dollar"
+                            android:layout_marginStart="15dp"/>
+
+
+
+                        <TextView
+                            android:id="@+id/value_usd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/img_usd"
+                            android:layout_below="@+id/text_usd"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:text="0.18"
+                            android:layout_marginStart="15dp"/>
+
+
+
+
+
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_below="@+id/usd_bg"
+                        android:id="@+id/cad_bg"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/us_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:padding="10dp"
+                        android:paddingEnd="10dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/img_cad"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/cad"
+                            android:contentDescription="@string/app_name" />
+
+                        <TextView
+                            android:id="@+id/text_cad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/img_cad"
+                            android:textColor="@color/colorTextPrimary"
+                            android:text="Canadian  Dollar"
+                            android:layout_marginStart="15dp"/>
+
+
+
+                        <TextView
+                            android:id="@+id/value_cad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/img_cad"
+                            android:layout_below="@+id/text_cad"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:text="0.18"
+                            android:layout_marginStart="15dp"/>
+
+
+
+
+
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/ngr_bg"
+                        android:layout_below="@id/cad_bg"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/cad_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:padding="10dp"
+                        android:paddingEnd="10dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/img_ngr"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ngr"/>
+
+                        <TextView
+                            android:id="@+id/text_ngr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/img_ngr"
+                            android:textColor="@color/colorTextPrimary"
+                            android:text="Nigerian Naira"
+                            android:layout_marginStart="15dp"/>
+
+
+
+                        <TextView
+                            android:id="@+id/value_ngr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/img_ngr"
+                            android:layout_below="@+id/text_ngr"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:text="0.18"
+                            android:layout_marginStart="15dp"/>
+
+
+
+
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cfa_bg"
+                        android:layout_below="@id/ngr_bg"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/us_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:padding="10dp"
+                        android:paddingEnd="10dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/img_cfa"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/cfa"/>
+
+                        <TextView
+                            android:id="@+id/text_cfa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/img_cfa"
+                            android:textColor="@color/colorTextPrimary"
+                            android:text="West African CFA Franc"
+                            android:layout_marginStart="15dp"/>
+
+
+
+                        <TextView
+                            android:id="@+id/value_cfa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/img_cfa"
+                            android:layout_below="@+id/text_cfa"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:text="0.18"
+                            android:layout_marginStart="15dp"/>
+
+
+
+
+
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/sou_bg"
+                        android:layout_below="@id/cfa_bg"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/cad_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:padding="10dp"
+                        android:paddingEnd="10dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/img_sou"
+                            android:layout_width="50dp"
+                            android:src="@drawable/sou"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <TextView
+                            android:id="@+id/text_sou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/img_sou"
+                            android:textColor="@color/colorTextPrimary"
+                            android:text="South African Rand"
+                            android:layout_marginStart="15dp"/>
+
+
+
+                        <TextView
+                            android:id="@+id/value_sou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/img_sou"
+                            android:layout_below="@+id/text_sou"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:text="0.18"
+                            android:layout_marginStart="15dp"/>
+
+
+
+
+
+
+
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_below="@+id/sou_bg"
+                        android:id="@+id/aed_bg"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/us_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:padding="10dp"
+                        android:paddingEnd="10dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/img_aed"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/aed"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/app_name" />
+
+                        <TextView
+                            android:id="@+id/text_aed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/img_aed"
+                            android:textColor="@color/colorTextPrimary"
+                            android:text="United Arab Emirates (UAE) Dirham"
+                            android:layout_marginStart="15dp"/>
+
+
+
+                        <TextView
+                            android:id="@+id/value_aed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/img_aed"
+                            android:layout_below="@+id/text_aed"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:text="0.18"
+                            android:layout_marginStart="15dp"/>
+
+
+
+
+
+
+
+
+                    </RelativeLayout>
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/eur_bg"
+                        android:layout_below="@id/aed_bg"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/cad_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:padding="10dp"
+                        android:paddingEnd="10dp"
+                        >
+
+                        <ImageView
+                            android:src="@drawable/eur"
+                            android:id="@+id/img_eur"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <TextView
+                            android:id="@+id/text_eur"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/img_eur"
+                            android:textColor="@color/colorTextPrimary"
+                            android:text="Euros"
+                            android:layout_marginStart="15dp"/>
+
+
+
+                        <TextView
+                            android:id="@+id/value_eur"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/img_eur"
+                            android:layout_below="@+id/text_eur"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:text="0.18"
+                            android:layout_marginStart="15dp"/>
+
+
+
+
+
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
